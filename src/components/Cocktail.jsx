@@ -106,9 +106,10 @@ function Cocktail() {
             .then(data => {
                 setCocktail({
                     name: data.drinks[0].strDrink,
-                    instructions: data.drinks[0].strInstructions,
+                    instructions: data.drinks[0].strInstructions.split('.').filter(sentence => sentence !== ' '),
                     image: data.drinks[0].strDrinkThumb
                 })
+                console.log(cocktail.instructions)
             })
             .catch(err => {
                 console.log(`error ${err}`)
@@ -132,7 +133,7 @@ function Cocktail() {
     }
 
     return (
-        <div>
+        <div className='selection'>
             <Autocomplete 
                 id="combo-box-demo"
                 options={cocktails}
@@ -143,15 +144,20 @@ function Cocktail() {
                 value={null}
                 blurOnSelect={true}
                 renderInput={(params) => (
-                    <TextField {...params} label="Combo box" variant="outlined" />
+                    <TextField {...params} label="Your drink" variant="outlined" />
                 )}
             />
                 {drinkName ? 
                     <div className="info">
-                        <img src={cocktail.image} alt="cocktail image" />
-                        <h2>We will be making {cocktail.name.toLowerCase()}.</h2>
-                        <h2>Instructions: {cocktail.instructions}</h2>
-                        <button onClick={resetSelection}>Clear</button>
+                        <div className='image'>
+                            <img src={cocktail.image} alt="cocktail image" />
+                        </div>
+                        <div className='instructions'>
+                            <h2>We will be making <span className='cocktail-name'>{cocktail.name.toLowerCase()}</span>.</h2>
+                            <h2 id='instructions'>Instructions: </h2>
+                            <ul>{cocktail.instructions.slice(0, cocktail.instructions.length-1).map((sentence) => <li>{sentence.trim()}</li>)}</ul>
+                            <button className='clear-btn btn' onClick={resetSelection}>Drink and make another</button>
+                        </div>
                     </div>
                     :
                     <div className="no-info">
