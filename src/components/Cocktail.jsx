@@ -108,7 +108,7 @@ function Cocktail() {
                     value={null}
                     blurOnSelect={true}
                     renderInput={(params) => (
-                        <StyledTextField {...params} label="Your drink" variant="outlined" />
+                        <TextField {...params} label="Your drink" variant="outlined" />
                     )}
                 />
                 <button className='surprise-brn btn' onClick={getRandomCocktail}><img src={'/surprise.svg'} width="25px" height="25px"></img></button>
