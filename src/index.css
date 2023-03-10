@@ -99,6 +99,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .instructions {
@@ -114,7 +115,7 @@ footer {
   padding: 50px;
   color: rgb(249, 164, 110);
   max-width: 500px;
-  margin: 50px 200px 0px;
+  margin: 0px 200px 0px;
 }
 
 .instructions #instructions{
