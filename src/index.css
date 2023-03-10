@@ -9,6 +9,28 @@ h5,
 p {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 20px;
+  color: rgb(173, 154, 122);
+}
+
+h4 {
+  font-size: 14px;
+  color: rgb(53, 53, 53);
 }
 
 *,
@@ -21,14 +43,17 @@ li {
   list-style-type: none;
   line-height: 25px;
   padding: 10px 0;
-  font-size: 21px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
 }
 
 body {
   /* background-color: #004e5a; */
   background-image: url("./assets/bar.jpg");
   background-repeat: no-repeat;
-  background-size:100% 100vh;
+  background-size: 100% 100%;
+  /* background-size:100vw 100vh; */
   /* background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -41,6 +66,17 @@ header {
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  bottom: 0px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -72,12 +108,12 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  outline: 3px dashed rgb(235, 11, 11);
+  outline: 2px dashed rgb(235, 11, 11);
   outline-offset: -30px;
   padding: 50px;
   color: rgb(249, 164, 110);
   max-width: 500px;
-  margin: 100px 200px;
+  margin: 50px 200px 0px;
 }
 
 .instructions #instructions{
@@ -113,6 +149,19 @@ img {
   border-radius: 4px;
 }
 
+.surprise-brn {
+  padding: 8px 10px;
+  margin-left: 10px;
+  background-color: transparent;
+  color: rgb(249, 159, 110); 
+  border: 2px solid #1f1b19d0;
+  align-self: auto;
+}
+
+.surprise-brn:hover {
+  border: 1px solid orange;
+}
+
 .clear-btn {
   background-color: transparent;
   color: rgb(249, 164, 110); 
@@ -123,4 +172,84 @@ img {
 .clear-btn:hover {
   background-color: rgba(238,101,57,255);
   color: black;
+}
+
+/*---------- MEDIA QUERIES ----------*/
+
+@media (max-width: 1100px) {
+  .info {
+    flex-direction: column;
+  }
+
+  .instructions {
+    height: auto;
+    width: 400px;
+    outline-offset: -20px;
+    padding: 40px;
+    margin-top: 50px;
+  }
+
+  .image {
+    width: 400px;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+
+  body {
+    background-size: auto 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .instructions {
+    width: 350px;
+  }
+
+  .image {
+    width: 350px;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image {
+    width: 300px;
+  }
+
+  .instructions {
+    width: 300px;
+  }
+
+  header {
+    width: 650px;
+  }
+}
+
+@media (max-width: 540px) {
+  header {
+    width: 595px;
+  }
+
+  .info {
+    width: 400px;
+  }
+}
+
+@media (max-width: 431px) {
+  header {
+    width: 450px;
+  }
+
+  .info {
+    width: 400px;
+  }
+
+  .instructions {
+    margin: 50px 50px 0 50px;
+  }
 }

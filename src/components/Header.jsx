@@ -4,7 +4,7 @@ function Header() {
     return (
         <header>
             <h1>Cozy Bar</h1>
-            <h3>Ready to make your day cozier?</h3>
+            <h4>Ready to make your day cozier?</h4>
         </header>
     )
 }

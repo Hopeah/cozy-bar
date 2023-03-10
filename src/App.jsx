@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from "./components/Header"
 import Cocktail from "./components/Cocktail"
+import Footer from "./components/Footer"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Cocktail />
+      {/* <Footer /> */}
     </div>
   )
 }
