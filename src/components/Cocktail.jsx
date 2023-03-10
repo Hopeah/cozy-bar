@@ -68,6 +68,7 @@ function Cocktail() {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
             .then(res => res.json()) // parse response as JSON
             .then(data => {
+                setDrinkName(data.drinks[0].strDrink)
                 setCocktail({
                     name: data.drinks[0].strDrink,
                     instructions: data.drinks[0].strInstructions.split('.').filter(sentence => sentence !== ' '),
