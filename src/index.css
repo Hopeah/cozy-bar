@@ -50,10 +50,10 @@ li {
 
 body {
   /* background-color: #004e5a; */
-  background-image: url("./assets/bar.jpg");
+  background-image: url('./assets/bar.jpg');
   background-repeat: no-repeat;
   /* background-size: 100%; */
-  background-size:100vw 100vh;
+  background-size: 100vw 100vh;
   /* height: 100vh; */
   /* background-size: cover;
   -webkit-background-size: cover;
@@ -118,12 +118,22 @@ footer {
   margin: 0px 200px 0px;
 }
 
-.instructions #instructions{
+.instructions #instructions {
   margin: 10px 0 20px;
 }
 
+#ingredients {
+  color: rgb(249, 164, 110);
+  list-style-type: none;
+  line-height: 25px;
+  padding: 10px 0;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+}
+
 .cocktail-name {
-  color: rgba(238,101,57,255);
+  color: rgba(238, 101, 57, 255);
 }
 
 .image {
@@ -155,7 +165,7 @@ img {
   padding: 8px 10px;
   margin-left: 10px;
   background-color: transparent;
-  color: rgb(249, 159, 110); 
+  color: rgb(249, 159, 110);
   border: 2px solid #1f1b19d0;
   align-self: auto;
 }
@@ -166,13 +176,13 @@ img {
 
 .clear-btn {
   background-color: transparent;
-  color: rgb(249, 164, 110); 
+  color: rgb(249, 164, 110);
   border: 2px solid #f1dfc3d0;
   align-self: auto;
 }
 
 .clear-btn:hover {
-  background-color: rgba(238,101,57,255);
+  background-color: rgba(238, 101, 57, 255);
   color: black;
 }
 
